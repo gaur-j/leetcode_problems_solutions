@@ -43,3 +43,24 @@ class leetcode_binary_search_1 {
         return h + 1;
     }
 }
+
+// leetcode problem 69 Sqrt(x) (E)
+
+class eetcode_binary_search_2 {
+    public int mySqrt(int x) {
+        int l = 0, h = x;
+
+        while (l <= h) {
+            int m = (l + h) / 2;
+            long root = (long) m * m;
+            if (root == x) {
+                return m;
+            } else if (root < x) {
+                l = m + 1;
+            } else {
+                h = m - 1;
+            }
+        }
+        return h;
+    }
+}
