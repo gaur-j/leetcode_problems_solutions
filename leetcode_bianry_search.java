@@ -67,7 +67,7 @@ class leetcode_binary_search_2 {
 
 // leetcode problem First Bad Version (E)
 
-public class Solution extends VersionControl {
+public class leetcode_bianry_search extends VersionControl {
     public int firstBadVersion(int n) {
         int l = 0, h = n;
 
