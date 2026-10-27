@@ -122,3 +122,31 @@ class leetcode_binary_search_4 {
         return ans;
     }
 }
+
+// leetcode problem 33 Search in Rotated Sorted Array (M)
+
+class Solution {
+    public int search(int[] arr, int target) {
+        int l = 0, h = arr.length - 1;
+
+        while (l <= h) {
+            int m = l + (h - l) / 2;
+            if (arr[m] == target)
+                return m;
+            if (arr[l] <= arr[m] && target != arr[m]) {
+                if (arr[m] > target && target >= arr[l]) {
+                    h = m - 1;
+                } else {
+                    l = m + 1;
+                }
+            } else {
+                if (arr[m] < target && target <= arr[h]) {
+                    l = m + 1;
+                } else {
+                    h = m - 1;
+                }
+            }
+        }
+        return -1;
+    }
+}

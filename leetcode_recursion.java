@@ -12,7 +12,7 @@ public class leetcode_recursion {
     }
 }
 
-// leetcode problem Climbing Stairs (E)
+// leetcode problem 70 Climbing Stairs (E)
 
 class leetcode_recursion_1 {
     public int climbStairs(int n) {
@@ -25,5 +25,16 @@ class leetcode_recursion_1 {
             b = curr;
         }
         return b;
+    }
+}
+
+// leetcode problem 231 Power of Two (E)
+
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        if (n <= 0)
+            return false;
+
+        return (n & (n - 1)) == 0;
     }
 }
